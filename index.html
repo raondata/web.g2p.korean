@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaonData G2P</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <input type="text">
+    <button>변환</button>
+    <p id="result">변환 결과가 나옵니다.</p>
+</body>
+<script>
+    inputField = document.querySelector('input');
+    button = document.querySelector('button');
+    answer = document.querySelector('#result');
+    requestUrl = "http://211.184.190.195:4000/phoneme"
+
+    button.addEventListener('click', function() {
+        if (inputField.value != "") {
+            // post request as form and get json response
+            fetch(requestUrl, {
+                method: 'POST',
+                body: JSON.stringify({
+                    'text': inputField.value
+                }),
+            }).then(function(response) {
+                return response.json();
+            }).then(function(json) {
+                console.log(json);
+                answer.innerHTML = json['ph_text']
+            })
+        }
+    })
+
+</script>
+</html>
