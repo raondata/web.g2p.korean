@@ -3,22 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RaonData G2P</title>
+    <title>G2P RaonData</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="static/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="static/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="static/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="static/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="static/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="static/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="static/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="static/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="static/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="static/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+    <link rel="manifest" href="static/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <div class="max-w-2xl mx-auto">
         <div class="h-screen flex flex-col items-center justify-center">
-            <h1 class="font-extrabold text-2xl">RaonData G2P</h1>
+            <img src="./static/logo.svg" class="w-32">
+            <h1 class="font-extrabold text-3xl">RaonData G2P</h1>
             <div class="p-4">
-                <input type="text" class="border-2 rounded-lg p-2 m-3">
+                <input type="text" class="border-2 w-64 rounded-lg p-2 m-3" placeholder="변환할 텍스트를 입력하세요.">
                 <button class="border-2 rounded-lg p-2 bg-blue-100 hover:bg-blue-200 active:border-blue-300">변환</button>
             </div>
             <p class="p-2 font-bold">변환 결과: <span class="font-normal" id="result"></span></p>
-            <p class="text-center text-gray-500 text-xs pt-10">
+            <p class="text-center text-gray-400 text-xs pt-10">
                 제54회 한국정보통신학회 추계종합학술대회
             </p>
-            <p class="text-center text-gray-700 text-xs">
+            <p class="text-center text-gray-400 text-xs">
                 음성합성 훈련을 위한 형태소 분석 기반 한국어 Grapheme-to-Phoneme 변환기
             </p>
         </div>
